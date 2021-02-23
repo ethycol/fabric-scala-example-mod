@@ -1,7 +1,7 @@
 plugins {
 	id 'java'
 	id 'scala'
-	id 'fabric-loom' version '0.5-SNAPSHOT'
+	id 'fabric-loom' version '0.6-SNAPSHOT'
 	id 'maven-publish'
 }
 
@@ -11,6 +11,12 @@ targetCompatibility = JavaVersion.VERSION_1_8
 archivesBaseName = project.archives_base_name
 version = project.mod_version
 group = project.maven_group
+
+repositories {
+	flatDir {
+		dirs 'libs'
+	}
+}
 
 dependencies {
 	// To change the versions see the gradle.properties file
